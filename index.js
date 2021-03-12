@@ -13,6 +13,8 @@ const profile = require('./controllers/profile');
 
 const app = express();
 
+process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
+
 const pdb = knex({
     client: 'pg',
     connection: {
